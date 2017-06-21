@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="js/contactus.js"></script>
+    <meta content="no-cache" http-equiv="CACHE-CONTROL">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Convict Records</title>
+	<!--Web icon-->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <link href="css/indexformobile.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<!--Web background-->
+<body style="background: url(img/backgrounds/admin-background.png) no-repeat center fixed; background-size: cover;">
+	<!--Web title-->
+    <header>
+		<a href="index.html"><h3 id="nav-logo">Queensland State Archives</h3></a>
+	</header>
+    <!--NAVIGATION BAR-->
+	<nav>
+		<ul class="showing">
+			<a href="index.html"><li>HOME</li></a>
+			<a href="analytics.html"><li>ANALYTICS</li></a>
+			<a href="search.html"><li>SEARCH</li></a>
+			<a href="gallery.html"><li>GALLERY</li></a>
+			<a href="contactus.html"><li>CONTACT US</li></a>
+			<a href="adminLogin.html"><li>ADMIN LOGIN</li></a>
+		</ul>
+		<div class="handle">  </div>
+	</nav>
+    <!--START OF PAGE CONTENTS-->
+    <div class="contents" id="admin-page">
+        <div class="container"> 
+            <div id="enquiryform">
+            <h1>Administrator Login</h1>
+            <p>This function is only accessible by authorised Queensland State Archives personnel.</p>
+			<!--Login form-->
+            <form name="MessageForm">
+                Username:<br><input type="text" name="username" onfocus="selectedElement('username');" onblur="deselectedElement('username');"><br>
+                Password:<br><input type="password" name="password" onfocus="selectedElement('password');" onblur="deselectedElement('password');"><br>
+				<!--LOGIN-->
+                <input id="submitbutton" type="button" value="Login">
+            </form>
+            </div>
+        </div>
+    </div>
+	<!--FOOTER-->
+    <div class="footer">
+		<!--QSA social networks-->
+        <div id="socialmedia">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/qldstatearchives"><img src="img/facebook-with-circle.png" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/qsarchives"><img src="img/twitter-with-circle.png" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/qsarchives/"><img src="img/instagram-with-circle.png" alt="Instagram Logo"></a>
+                </li>
+            </ul>
+        </div>
+
+		<!--Copyright information-->
+        <div id="copyright">
+            <p><a href="http://www.archives.qld.gov.au/About/Pages/Copyright.aspx">
+            &#169; The State of Queensland - Queensland State Archives 2016</a><br>Website was made by Team Orange</p>
+        </div>
+    </div>
+</html>

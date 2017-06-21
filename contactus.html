@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="CACHE-CONTROL" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convict Records</title>
+	<!--Web icon-->
+    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <link href="css/indexformobile.css" rel="stylesheet">
+	<script src="js/contactus.js"></script>
+</head>
+
+<!--Web background-->
+<body style="background: url(img/backgrounds/contact-background.png) no-repeat center fixed; background-size: cover;">
+	<!--Web title-->
+    <header>
+		<a href="index.html"><h3 id="nav-logo">Queensland State Archives</h3></a>
+	</header>
+    <!--NAVIGATION BAR-->
+	<nav>
+		<ul class="showing">
+			<a href="index.html"><li>HOME</li></a>
+			<a href="analytics.html"><li>ANALYTICS</li></a>
+			<a href="search.html"><li>SEARCH</li></a>
+			<a href="gallery.html"><li>GALLERY</li></a>
+			<a href="contactus.html"><li>CONTACT US</li></a>
+			<a href="adminLogin.html"><li>ADMIN LOGIN</li></a>
+		</ul>
+		<div class="handle">  </div>
+	</nav>
+    <!--START OF PAGE CONTENTS-->
+    <!--CONTACT US INFORMATION-->
+    <div class="contents">
+        <div class="container">
+            <div id="enquiryform">
+                <h1>General Enquiries and Feedback</h1>
+                <p>Queensland State Archives welcomes your comments and suggestions. This information helps us provide better services. Please send us your comments by completing the online feedback form (below) and clicking on Submit.</p>
+                <p>*Field marked with an asterisk must be completed.</p>
+                <!--Contact us form-->
+                <form name="MessageForm" onsubmit="return validateForm()" method="post">
+                    <div class="form-input-top-contact">
+                          <label>
+                            <span><h4>*NAME:</h4></span>
+                            <input id="contact-name" type="text" name="name" onfocus="selectedElement('name');" onblur="deselectedElement('name');" required>
+                          </label>
+                          <label>
+                            <span><h4>*EMAIL:</h4></span>
+                            <input id="conatct-email" type="email" pattern="[^ @]*@[^ @]*" name="email" onfocus="selectedElement('email');" onblur="deselectedElement('email');" required>
+                          </label>
+                    </div>
+                    <div class="form-input-contact">
+                          <label>
+                            <span><h4>SUBJECT:</h4></span>
+                            <input id="contact-subject" type="text" name="subject" onfocus="selectedElement('subject');" onblur="deselectedElement('subject');" required>
+                          </label>
+                        <label>
+                            <span><h4>*MESSAGE:</h4></span>
+                            <textarea id="contact-message" type="textarea" name="message" onfocus="selectedElement('message');" onblur="deselectedElement('message');" required></textarea>
+                          </label>
+                    </div><br><br>
+					<!--Submit form-->
+                    <input id="submitbutton" type="submit" value="Submit">
+                </form>
+                
+            <br></div>
+			<!--QSA address map-->
+            <h1>Visiting the Archives</h1>
+            <p>We are open Monday to Friday from 9.00am to 4.30pm, <strong>excluding Public Holidays and the Christmas to New Year holiday period</strong>.  The public search room is also open on the second Saturday of every month from 9.00am to 4.30pm.</p>
+            <h2>Contact Us</h2>
+            <p> Telephone: (07) 3131 7777 <br> Facsimile: (07) 3131 7764 <br> Email: 
+            <a href="mailto:info@archives.qld.gov.au">info@archives.qld.gov.au</a></p>
+			<!--To display map-->
+            <iframe width="100%" height="450" frameborder="0" style="border:0; padding: 0 10% 0 10%;"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:Eis0MzUgQ29tcHRvbiBSZCwgUnVuY29ybiBRTEQgNDExMywgQXVzdHJhbGlh&key=AIzaSyAvjf6tSsAHmsPKjvP0zvuy3ySU3h_RjSA" allowfullscreen></iframe><br><br>
+            
+        </div>
+    </div>
+	<!--FOOTER-->
+	<div class="footer">
+		<!--QSA social networks-->
+        <div id="socialmedia">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/qldstatearchives"><img src="img/facebook-with-circle.png" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/qsarchives"><img src="img/twitter-with-circle.png" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/qsarchives/"><img src="img/instagram-with-circle.png" alt="Instagram Logo"></a>
+                </li>
+            </ul>
+        </div>
+		<!--Copyright information-->
+        <div id="copyright">
+            <p><a href="http://www.archives.qld.gov.au/About/Pages/Copyright.aspx">
+            &#169; The State of Queensland - Queensland State Archives 2016</a><br>Website was made by Team Orange</p>
+        </div>
+    </div>
+</body>
+
+</html>

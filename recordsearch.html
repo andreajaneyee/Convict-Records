@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="CACHE-CONTROL" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convict Records</title>
+	<!--Web icon-->
+    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+   
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="js/search.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <link href="css/indexformobile.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+</head>   
+
+<!--Web background-->
+<body style="background: url(img/backgrounds/search-background.png) no-repeat center fixed; background-size: cover;">
+    <!--Web title-->
+    <header>
+		<a href="index.html"><h3 id="nav-logo">Queensland State Archives</h3></a>
+	</header>
+	<!--NAVIGATION BAR-->
+	<nav>
+		<ul class="showing">
+			<a href="index.html"><li>HOME</li></a>
+			<a href="analytics.html"><li>ANALYTICS</li></a>
+			<a href="search.html"><li>SEARCH</li></a>
+			<a href="gallery.html"><li>GALLERY</li></a>
+			<a href="contactus.html"><li>CONTACT US</li></a>
+			<a href="adminLogin.html"><li>ADMIN LOGIN</li></a>
+		</ul>
+		<div class="handle">  </div>
+	</nav>
+	
+    <!--START OF PAGE CONTENTS-->
+    <div class="contents">  
+        
+		<!--SEARCH MENU-->
+        <div class="container">
+            <p><a href="search.html">Back to search page</a></p>
+            <h1>Convict Records Search</h1>
+            <p>Look for specific sets of convict records based on the convict's conviction details.</p>
+
+            <div class="advancedsearch">
+            <div class="form-input-top">
+                
+                <!--Record search form-->
+        
+                      <label>
+                        <span><h4>Name:</h4></span>
+                        <input id="myname" type="text" name="myname" placeholder="Enter name">
+                      </label>
+                      <label>
+                        <span><h4>Ship:</h4></span>
+                        <input id="myship" type="text" name="myship" placeholder="Enter ship name"/>
+                      </label>
+                <label>
+                        <span><h4>Original conviction place: </h4></span>
+                        <input id="ocp" type="text" name="originalconvictionplace" placeholder="Enter place">
+                      </label>
+                      <label>
+                        <span><h4>Original conviction date - year: </h4></span>
+                        <input id="ody" type="text" name="originalconvictiondate" placeholder="Enter date" type="number"/>
+                      </label>
+                <label>
+                        <span><h4>Original conviction offence:</h4></span>
+                        <input id="oco" type="text" name="originaloffence" placeholder="Enter offence">
+                      </label>
+                      <label>
+                        <span><h4>Original conviction sentence:</h4></span>
+                        <input id="ocs" type="text" name="originalsentence" placeholder="Enter sentence"/>
+                      </label>
+        
+        </div>
+            
+
+                <h4>Trade: </h4><input id="trade" placeholder="Enter trade"></input>
+
+
+				
+  
+	<!--Search function-->
+    <button type="submit" onclick="dosearch()" name="mybtn" id="search-btn"> Search </button>
+            
+            
+	<script type="text/javascript">
+			<!--to get search result-->
+			function dosearch(){
+					
+					var myname = document.getElementById("myname").value;
+					var myship = document.getElementById("myship").value;	
+					var ocp = document.getElementById("ocp").value;
+					var ody = document.getElementById("ody").value;
+					var oco = document.getElementById("oco").value;
+					var ocs = document.getElementById("ocs").value;
+					var trade = document.getElementById("trade").value;			
+					
+			 myajax = $.ajax({
+      url: "getsearchresultsother.php?myname="+myname+"&myship="+myship+"&ocp="+ocp+"&odm="+odm+"&ody="+ody+"&oco="+oco+"&ocs="+ocs+"&trade="+trade+"&ccbw="+ccbw+"&ccw="+ccw+"&ccdm="+ccdm+"&ccy="+ccy+"&cco="+cco+"&ccs="+ccs+"&r1="+r1+"&r2="+r2+"&r3="+r3+"&r4="+r4+"&r5="+r5+"&a="+a,
+      success : function(data) {
+                    var e = document.getElementById("forresults");
+					e.innerHTML = data;
+                }
+    });
+			};
+			
+			</script>
+
+            </div>
+        
+        <div class="searchresults">
+            <!--To display search result-->
+                <h3>Results:</h3>
+                    <div id="forresults"></div>
+            </div>
+  
+ 
+
+  </div>
+	<!--FOOTER-->
+	<div class="footer">
+		<!--QSA social networks-->
+        <div id="socialmedia">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/qldstatearchives"><img src="img/facebook-with-circle.png" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/qsarchives"><img src="img/twitter-with-circle.png" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/qsarchives/"><img src="img/instagram-with-circle.png" alt="Instagram Logo"></a>
+                </li>
+            </ul>
+        </div>
+
+		<!--Copyright information-->
+        <div id="copyright">
+            <p><a href="http://www.archives.qld.gov.au/About/Pages/Copyright.aspx">
+            &#169; The State of Queensland - Queensland State Archives 2016</a><br>Website was made by Team Orange</p>
+        </div>
+    </div>
+
+</body>
+</html>

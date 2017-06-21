@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="CACHE-CONTROL" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convict Records</title>
+    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="js/search.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <link href="css/indexformobile.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body style="background: url(img/backgrounds/search-background.png) no-repeat center fixed; background-size: cover;">
+    <header>
+		<a href="index.html"><h3 id="nav-logo">Queensland State Archives</h3></a>
+	</header>
+	<nav>
+		<ul class="showing">
+			<a href="index.html"><li>HOME</li></a>
+			<a href="analytics.html"><li>ANALYTICS</li></a>
+			<a href="search.html"><li>SEARCH</li></a>
+			<a href="gallery.html"><li>GALLERY</li></a>
+			<a href="contactus.html"><li>CONTACT US</li></a>
+			<a href="adminLogin.html"><li>ADMIN LOGIN</li></a>
+		</ul>
+		<div class="handle">  </div>
+	</nav>
+    <div class="contents">
+        <div class="container">
+            <p><a href="search.html">Back to search page</a></p>
+            <h1>Convict Records Search</h1>
+            <p>Look for specific sets of convict records based on the convict's conviction details.</p>
+
+            <div class="advancedsearch">
+                 <div class="form-input-top">
+                      <label>
+                        <span><h4>Name:</h4></span>
+                        <input id="name1" type="text" name="myfamilyname" onfocus="selectedElement('searchbar');" onblur="deselectedElement('searchbar');" placeholder="Enter any relevant names">
+                      </label>
+                      <label>
+                        <span><h4>Prisoner number:</h4></span>
+                        <input id="name2" type="text" name="myfirstname" onfocus="selectedElement('searchbar');" onblur="deselectedElement('searchbar');" placeholder="Enter Prisoner's 4-digit number"/>
+                      </label>
+                </div>
+                <h4>Convict Description (Optional)</h4>
+                    <div id="row1" class="row">
+                          <label for="conviction-year">
+                                <select name="mycomplexion" id="cmp" class="form-control">
+                                    <!--Gotta talk to Tina about how this is gonna turn out-->
+                                    <option value="">All years of conviction</option>
+                                    <option value="Black"></option>
+                                    <option value="Coloured"></option>
+                                    <option value="Copper">Copper</option>
+                                    <option value="Dark">Dark</option>
+                                    <option value="Dark freckled">Dark freckled</option>
+                                    <option value="Dark pock pitted">Dark pock pitted</option>
+                                    <option value="Dark ruddy">Dark ruddy</option>
+                                    <option value="Dark pale">Dark pale</option>
+                                </select>
+                          </label>
+                          <label for="conviction-season">
+                            <select id="eye" name="myeyes" class="form-control">
+                                    <option value="">All seasons</option>
+                                    <option value="Summer">Summer</option>
+                                    <option value="Autumn">Autumn</option>
+                                    <option value="Winter">Winter</option>
+                                    <option value="Spring">Spring</option>
+                            </select>
+                          </label>
+                    </div>
+                    <div id="row2" class="row">
+                          <label for="Haircolour">
+                            <select id="hair" name="myhair" class="form-control">
+                                    <option value="">All hair colours</option>
+                                    <option value="Auburn">Auburn</option>
+                                    <option value="Bald">Bald</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Brown">Brown</option>
+                                    <option value="Dark">Dark</option>
+                                    <option value="Dark Brown">Dark Brown</option>
+                                    <option value="Dark Flaxan">Dark Flaxan</option>
+                                    <option value="Grey">Grey</option>
+                                    <option value="Hazel">Hazel</option>
+                                    <option value="Light Brown">Light Brown</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Reddish Brown">Reddish Brown</option>
+                                    <option value="Sandy">Sandy</option>
+                                    <option value="Sandy Brown">Sandy Brown</option>
+                                    <option value="Sandy Dark">Sandy Dark</option>
+                            </select>
+                          </label>
+                          <label for="Height">
+                           <select name="myheights" id="ht" class="form-control">
+                                        <option value="">All height ranges</option>
+                                        <option value="< 5">Under 5 ft</option>
+                                        <option value="= 5">5 - 6 ft</option>
+                                        <option value="> 5">Over 6 ft</option>
+                                </select>
+                          </label>
+                    </div>
+
+
+                <button type="submit" onclick="dosearch()" name="mybtn" id="search-btn"> Search </button>
+                <script type="text/javascript">
+
+                function dosearch(){
+
+                        var e = document.getElementById("ht");
+                        var h = e.options[e.selectedIndex].value;
+                        var e = document.getElementById("cmp");
+                        var c = e.options[e.selectedIndex].value;
+                        var e = document.getElementById("eye");
+                        var ey = e.options[e.selectedIndex].value;
+                        var e = document.getElementById("hair");
+                        var hr = e.options[e.selectedIndex].value;
+                        var nm1 = document.getElementById("name1").value;
+                        var nm2 = document.getElementById("name2").value;
+
+
+                 myajax = $.ajax({
+          url: "getsearchresults.php?mycomplexion="+c+"&myeyes="+ey+"&myhair="+hr+"&myheights="+h+"&myfirstname="+nm2+"&myfamilyname="+nm1,
+          success : function(data) {
+                        var e = document.getElementById("ajaxresults");
+                        e.innerHTML = data;
+                    }
+        });
+                };
+                </script>
+            </div>
+            <br>
+            <div class="searchresults">
+                <h3>Results:</h3>
+                    <div id="ajaxresults"></div>
+            </div>
+        </div>
+    </div>
+	<div class="footer">
+        <div id="socialmedia">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/qldstatearchives"><img src="img/facebook-with-circle.png" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/qsarchives"><img src="img/twitter-with-circle.png" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/qsarchives/"><img src="img/instagram-with-circle.png" alt="Instagram Logo"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p><a href="http://www.archives.qld.gov.au/About/Pages/Copyright.aspx">
+            &#169; The State of Queensland - Queensland State Archives 2016</a><br>Website was made by Team Orange</p>
+        </div>
+    </div
+
+
+
+</body>
+
+</html>

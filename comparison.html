@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="no-cache" http-equiv="CACHE-CONTROL">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Convict Records</title>
+	<!--Web icon-->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <link href="css/indexformobile.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Google Charts column chart script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<!--To generate comaprison bar chart for Number of Convicts per year vs Characteristics(Complexion, Hair, Age, Eyes, Religion)-->
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(drawStuff);
+
+        function drawStuff() {
+
+            var stringdata = "OLD STRING";
+            jsonData = $.ajax({
+                url: "getallgroups.php?name=Hair",
+                success: function(msg) {
+
+                    stringdata = msg;
+
+                    var data = new google.visualization.DataTable(stringdata);
+
+                    myjason = data.toJSON();
+
+                    var options = {
+                        title: 'Chess opening moves',
+                        width: 900,
+                        legend: {
+                            position: 'none'
+                        },
+                        chart: {
+                            title: 'Number of convicts per year',
+                            subtitle: 'In Moreton Bay'
+                        },
+                        bars: 'vertical', // Required for Material Bar Charts.
+                        axes: {
+                            x: {
+                                0: {
+                                    side: 'bottom',
+                                    label: ''
+                                } // Top x-axis.
+                            }
+                        },
+                        bar: {
+                            groupWidth: "90%"
+                        }
+                        //colors: {['#eb7600']}
+                    };
+
+                    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+                    chart.draw(data, options, {
+                    	colors: ['#eb7600'],
+                    });
+                }
+            });
+
+        };
+
+
+        function makenewgraph() {
+            //document.getElementById('fortest').innerHTML = "BUT";
+
+            var e = document.getElementById("chooseselector");
+            var strUser = e.options[e.selectedIndex].value;
+
+            //document.getElementById('fortest').innerHTML = strUser;
+
+            var stringdata = "OLD STRING";
+            jsonData = $.ajax({
+                url: "getallgroups.php?name=" + strUser,
+                success: function(msg) {
+
+                    stringdata = msg;
+
+                    var data = new google.visualization.DataTable(stringdata);
+
+                    myjason = data.toJSON();
+
+                    var options = {
+                        title: 'Chess opening moves',
+                        width: 900,
+                        legend: {
+                            position: 'none'
+                        },
+                        chart: {
+                            title: 'Number of convicts per year',
+                            subtitle: 'In Moreton Bay'
+                        },
+                        bars: 'vertical', // Required for Material Bar Charts.
+                        axes: {
+                            x: {
+                                0: {
+                                    side: 'bottom',
+                                    label: ''
+                                } // Top x-axis.
+                            }
+                        },
+                        bar: {
+                            groupWidth: "90%"
+                        },
+                        colors: ['#eb7600'],
+                    };
+                    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+                    chart.draw(data, options);
+                }
+            });
+        };
+    </script>
+</head>
+<!--Web background-->
+<body style="background: url(img/backgrounds/analytics-background.png) no-repeat center fixed; background-size: cover;">
+	<!--Web title-->
+    <header>
+		<a href="index.html"><h3 id="nav-logo">Queensland State Archives</h3></a>
+	</header>
+    <!--NAVIGATION BAR-->
+	<nav>
+		<ul class="showing">
+			<a href="index.html"><li>HOME</li></a>
+			<a href="analytics.html"><li>ANALYTICS</li></a>
+			<a href="search.html"><li>SEARCH</li></a>
+			<a href="gallery.html"><li>GALLERY</li></a>
+			<a href="contactus.html"><li>CONTACT US</li></a>
+			<a href="adminLogin.html"><li>ADMIN LOGIN</li></a>
+		</ul>
+		<div class="handle">  </div>
+	</nav>
+    <<!--START OF PAGE CONTENTS-->
+    <div class="contents">
+		<!--Comparison Contents-->
+        <div class="container">
+            <p><a href="analytics.html">Back to analytics</a></p>
+            <h1>Comparison</h1>
+            <p>Here, you can view graphical representations of physical characteristics of convicts. Find out what features were most common!</p>
+            
+            <!--SELECTOR-->
+            <div id="select-data-btn">
+                <select id="chooseselector">
+                  <option>Select Characteristic</option>
+                  <option value="Complexion">Complexion</option>
+                  <option value="Hair">Hair</option>
+                  <option value="age">Age</option>
+                  <option value="Eyes">Eyes</option>
+                  <option value="Religion">Religion</option>
+                </select>
+                <button onclick="makenewgraph()" id="graph-btn">See graph</button>
+            </div><br>
+            <!--COMPARISON GRAPH-->
+            <div id="top_x_div" style="width: 100%; height: 500px;"></div>
+        </div>
+    </div>
+	<!--FOOTER-->
+    <div class="footer">
+		<!--QSA social networks-->
+        <div id="socialmedia">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/qldstatearchives"><img src="img/facebook-with-circle.png" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/qsarchives"><img src="img/twitter-with-circle.png" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/qsarchives/"><img src="img/instagram-with-circle.png" alt="Instagram Logo"></a>
+                </li>
+            </ul>
+        </div>
+
+		<!--Copyright information-->
+        <div id="copyright">
+            <p><a href="http://www.archives.qld.gov.au/About/Pages/Copyright.aspx">
+            &#169; The State of Queensland - Queensland State Archives 2016</a><br>Website was made by Team Orange</p>
+        </div>
+    </div>
+</body>
+
+</html>

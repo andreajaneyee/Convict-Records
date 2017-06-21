@@ -1,0 +1,888 @@
+/*****
+UNIVERSAL STYLES
+*****/
+body {
+    background-color: white;
+    width: 100%;
+	height: 100%;
+    position: relative;
+}
+
+header{
+	background: rgba(0, 0, 0, 0.79);
+	width: 100%;
+	padding: 1% 0;
+}
+
+h1 {
+    font-size: 38px;
+    text-align: center;
+    letter-spacing: .5px;
+    font-family: 'Raleway',sans-serif;
+    color: #343434;
+    text-align: left;
+    margin-left: 10%;
+    text-transform: uppercase;
+    font-weight: thin;
+}
+
+
+h2 {
+    font-size: 18px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    color: #343434;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Raleway',sans-serif;
+    font-size: 32px;
+    color: rgba(235, 118, 0, 0.92);
+    margin: 10px;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+a {
+    font-family: 'Raleway',sans-serif;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #727272;
+    
+}
+
+.contents {
+    padding-top: 5%;
+    width: 100%;
+}
+
+.container {
+    background-color: #f2f2f2;  
+    padding-top: 4%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.container a {
+    color: rgba(235, 118, 0, 0.92);
+    font-weight: bold;
+}
+
+
+#top_x_div {
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 2%;
+}
+
+#select-data-btn {
+    padding-left: 10%;
+}
+
+/*NAVBAR*/
+/* zaim navbar*/
+nav ul{
+	background-color: rgba(0, 0, 0, 0.79);
+	overflow:hidden;
+	padding: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+nav ul li{
+	font-family: 'Raleway',sans-serif;
+	display: inline-block;
+	padding: 20px;
+	color: rgba(235, 118, 0, 0.92);
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+nav ul li:hover{
+	background: #575757;
+    cursor: pointer;
+}
+/*END OF NAVBAR STYLING*/
+
+/*FOOTER*/
+.footer {
+    background-color: rgba(0, 0, 0, 0.79);
+    width: 100%;
+	height: auto;
+    overflow:hidden;
+    clear: both;
+	padding: 1%;
+    text-align: center;
+}
+
+.footer p, .footer h3 {
+    color: white;
+    text-align: left;
+    padding: 0 0 5px 0;
+}
+
+.footer h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+    margin: 0 0 1% 0;
+}
+
+.footer h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    color: white;
+    margin: 0;  
+}
+
+.footer p {
+	font-size: 12px;
+    margin: 0;
+}
+
+.footer div {
+    text-align: center;
+}
+
+.footer ul, .footer li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+}
+
+#socialmedia {
+}
+
+#socialmedia li {
+    margin: 0 5px 0 5px;
+}
+
+#socialmedia img {
+    width: 50px;
+    height: auto;
+}
+
+#copyright p, #copyright a{
+    text-align: center;
+}
+/*END OF FOOTER STYLING*/
+
+/***********************************************
+INDIVIDUAL PAGE STYLING STARTS HERE
+Rules: PAGE STYLING IS ACCORDING TO PAGE ORDER
+DO NOT ALTER!
+***********************************************/
+
+/*HOME PAGE*/
+#homepage {
+    color: white;
+	margin-top: -9%;
+}
+
+.landing-image img{
+    width: 100%;
+    z-index: -8;
+}
+
+.text{
+  
+}
+
+.info {
+    margin: 20% 15% 20% 15%;
+}
+
+.social-media {
+    background-color: rgba(60, 60, 60, 0.85);
+    height: 100px;
+    width: 100%;
+}
+
+.text h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #fff;
+    margin: 0;
+}
+
+.text p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.text{
+      margin: 0 auto;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/*ANALYTICS PAGE*/
+/** TAB STYLING **/
+
+h5 {
+    font-family: 'Raleway',sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.table_img_links {
+    float: left;
+    width: 50%;
+    text-align: center !important;
+    position: relative;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 120%;
+    font-weight: bold;
+    display: block;
+}
+
+#table-container-padding {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#table-container-padding span.text-content {
+    margin: 0 10%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    height: 240px;
+    position: absolute;
+    top: 5%;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+#table-container-padding span.text-content span {
+    margin: 0 auto;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#table-container-padding span.text-content:hover {
+    opacity: 1;
+}
+
+#table-container-padding span.text-content p {
+    color: white;
+    font-size: 70%;
+    text-align: center;
+}
+
+
+select {
+    width: 20%;
+    font-size: 14px;
+    font-weight: bold;
+    border-style: none;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;  
+    color: #727272;
+    margin-right: 1%;
+    padding: 0;
+    
+}
+
+
+#chart_div {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 500px;    
+}
+
+#fortest{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 2%;
+    height: 500px;
+}
+
+#graph-btn {
+    width: 34%;
+    height: 40px;
+    font-size: 100%;
+}
+
+.img_links {
+    float: left;
+    width: 50%;
+    text-align: center !important;
+    position: relative;
+	padding-top: 20px;
+}
+
+.img_links img {
+    width: 80%;
+}
+
+span.text-content {
+  margin: 0 10%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 265px;
+  position: absolute;
+  top: 5%;
+  width: 80%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content span {
+      margin: 0 auto;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.text-content:hover {
+  opacity: 1;
+}
+
+a.img_links:hover {
+      opacity: 1;
+}
+
+#wrapper {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+.rslides {
+  margin: 0 auto 40px;
+  }
+
+.rslides_tabs {
+  list-style: none;
+  padding: 0;
+  background: rgba(0,0,0,.25);
+  box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  font-size: 18px;
+  list-style: none;
+  margin: 0 auto 50px;
+  max-width: 500px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  }
+
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  margin-right: 1px;
+  }
+
+.rslides_tabs a {
+  width: auto;
+  line-height: 20px;
+  padding: 9px 20px;
+  height: auto;
+  background: transparent;
+  display: inline;
+  }
+
+.rslides_tabs li:first-child {
+  margin-left: 0;
+  }
+
+.rslides_tabs .rslides_here a {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-weight: bold;
+  }
+
+
+#download {
+  background: #333;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 60px auto;
+  max-width: 500px;
+  padding: 20px;
+  }
+
+#download:hover {
+  background: rgba(255,255,255,.15);
+  }
+
+.footer {
+  font-size: 11px;
+  }
+  
+.footer a {
+  color: rgba(235, 118, 0, 0.92);
+  }
+  
+.footer a:hover{
+	text-decoration: underline;
+}
+  
+ 
+/* Callback styling */
+
+.events {
+  list-style: none;
+  }
+
+.callbacks_container {
+  margin-bottom: 50px;
+  position: relative;
+  float: left;
+  width: 100%;
+  }
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.callbacks img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+  }
+
+.callbacks .caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 100%;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  }
+
+.callbacks_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 52%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../img/themes.gif") no-repeat left top;
+  margin-top: -45px;
+  }
+
+.callbacks_nav:active {
+  opacity: 1.0;
+  }
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }
+
+#slider3-pager a {
+  display: inline-block;
+}
+
+#slider3-pager img {
+  float: left;
+}
+
+#slider3-pager .rslides_here a {
+  background: transparent;
+  box-shadow: 0 0 0 2px #666;
+}
+
+#slider3-pager a {
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font: 24px/50px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  .callbacks_nav {
+    top: 47%;
+    }
+  }
+
+/** End: to style analyigation tab **/
+
+/*SELECT SEARCH PAGE*/
+.selectSearch {
+    float: left;
+    font-size: 180%;
+    color: white;
+    font-weight: lighter;
+    width: 45%;
+    height: 205px;  
+    background: rgba(235, 118, 0, 0.44);
+    padding-top: 8%;
+    padding-bottom: 5%;
+    border-style: solid;
+    border-color: #f2f2f2;
+    display: block;
+    text-align: center;
+   -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    
+}
+
+.selectSearch:hover {
+    background-color: rgb(235, 118, 0);
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.alignSearch {
+    margin-left: 10%;   
+    
+}
+
+
+/*DESCRIPTION SEARCH PAGE*/
+.searchBar {
+    text-align: center;
+}
+
+h6 {
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    font-size: 16px;
+}
+
+/* FORM TEXT INPUT BOX STYLING */
+.bar {
+    padding: 8px 15px;
+    height: 50px;
+    border-radius: 5px;
+    border-color: #dacde0;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.advancedsearch h3 {
+    margin: 0 0 8px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 25px;
+    color: rgba(77, 77, 77, 0.96);
+    
+}
+
+.searchresults h3 {
+    text-align: left;
+}
+
+.advancedsearch h4, span h4 {
+    padding-left: 10px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(77, 77, 77, 0.96);
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: none;
+}
+
+span h4 {
+    padding-left: 0;
+}
+
+/* FORM INPUT DIVS STYLES */
+/* Top row of form inputs */
+.form-input-top label {
+	margin-left: -0.5%;
+    width: 50%;
+    float: left;
+    padding: 2% 0 0px 10px;
+}
+
+.form-input-top span {
+    display: block;
+}
+
+.form-input-top input {
+    width: 95%; 
+    padding: 5px;
+}
+
+/* Bottom row of form inputs */
+.form-input-bottom label {
+    width: 50%;
+    float: left;
+    padding: 0 0 0px 10px;
+}
+
+.form-input-bottom span {
+    display: block;
+}
+
+.form-input-bottom input {
+    width: 95%; 
+    padding: 5px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    border-style: none;
+    background: #393939;
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+button:hover {
+    box-shadow: 0 3px 3px 0 #d4cbc9,0 3px 3px 0 #d4cbc9;
+}
+
+/* START OF FILTER SECTION STYLES */
+/* Entire div box styling */
+.advancedsearch {
+    position: static;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 80%;
+}
+
+/* Styles for each row of boxes */
+.row {
+    margin: 0;
+}
+
+.row label {
+    width: 50%;
+    float: left;
+    padding: 2% 10px 0px 10px;
+}
+
+/* Adds bottom padding to last row of dropdown boxes */
+#row3 {
+    height: 60px;
+}
+/* END OF FILTER SECTION STYLING */
+
+#search-btn {
+	margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* START OF SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    background-color: gray;
+}
+
+/*CONTACT PAGE STYLING*/
+#enquiryform p {
+    text-align: left;
+}
+
+form {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 10% 0 10%;
+    
+}
+
+.form-input-top-contact label {
+	margin-left: -0.5%;
+    width: 50%;
+    padding: 2% 0 0px 10px;
+}
+
+.form-input-contact label {
+	margin-left: -0.5%;
+    width: 100%;
+    padding: 2% 0 0px 10px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0 20px;
+    letter-spacing: inherit;
+    padding: 15px;
+    outline-color: rgba(235, 118, 0, 0.92);
+}
+
+#contact-message {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0 20px;
+    letter-spacing: inherit;
+    padding: 15px;
+    outline-color: rgba(235, 118, 0, 0.92);
+}
+
+#submitbutton {
+    border: none;
+    background: #484848;
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition-property: background;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+
+#submitbutton:hover {
+    background: rgba(235, 118, 0, 0.92);
+}
+
+/* ADMIN LOGIN PAGE STYLING */
+
+/* menu toolbar for mobile by zaim */
+.handle {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.79);
+	text-align: left;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	display: none;
+	color: rgba(235, 118, 0, 0.92);
+}
+
+/*********************************
+FOR MOBILE USE ONLY
+**********************************/
+@media screen and (max-width : 580px) {
+   	
+	nav ul{
+		max-height: 0;
+	}
+	
+	.showing{
+		max-height: 20em;
+	}
+
+    nav ul li {
+		box-sizing: border-box;
+		width:100%;
+		padding: 15px;
+        text-align: left;
+    }
+	
+	.handle{
+		display:block;
+	}
+
+    #logo1 {
+        display: none;
+    }
+
+    #logo2 {
+        display: none;
+    }
+
+	
+    .qsa_details {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+    }
+	
+    .qsa_details > div{
+        width:100%;
+        float: left;
+        height: auto;
+        clear:both;
+    }
+    .qsa_details > div > *{
+        text-align: center;
+    }
+	
+    #contactno > *{
+    text-align: center;
+}
+}
+
+#fulls {
+    width: 100%;
+}
